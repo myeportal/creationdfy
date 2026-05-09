@@ -24,6 +24,10 @@ This project was rebranded from the workspace's idea-to-creation / selfmademoney
 
 ## Files
 - `index.html` — main landing page
+- `apply.html` — contact/apply intake page
+- `thank-you.html` — post-payment setup page
+- `affiliate.html` — lightweight affiliate portal / referral link generator
+- `referral.js` — referral propagation and simple email-based affiliate code generation
 - `assets/` — reused/rebranded imagery
 - `vercel.json` — static deployment config
 
@@ -31,3 +35,9 @@ This project was rebranded from the workspace's idea-to-creation / selfmademoney
 - Intended GitHub repo: `https://github.com/myeportal/creationdfy`
 - Intended production host: Vercel
 - If the GitHub repo is already connected to Vercel, pushing `main` should trigger deployment automatically.
+
+## Notes
+- The intake / thank-you / affiliate flow is now scaffolded.
+- Affiliate commission is framed as **25% of the initial sale**.
+- Referral propagation is implemented client-side for now.
+- For payout-grade affiliate tracking and authenticated portal behavior, connect this flow to a real backend datastore and payment system next.

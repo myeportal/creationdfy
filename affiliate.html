@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Affiliate Referrals | Creation DFY</title>
+  <meta name="description" content="Creation DFY affiliate referrals. Generate your referral link and earn 25% of the initial sale." />
+  <style>
+    :root { --bg:#fffaf4; --panel:rgba(255,255,255,.95); --line:rgba(114,92,61,.12); --text:#2e241a; --muted:#6f6253; --green:#4f8a5b; --gold:#d5a14c; --shadow:0 24px 70px rgba(67,43,14,.12); }
+    *{box-sizing:border-box} body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--text);background:linear-gradient(180deg,#fffdf8 0%,#fbf5eb 48%,#f6efe3 100%);line-height:1.65}
+    a{text-decoration:none;color:inherit} .container{width:min(980px,calc(100% - 32px));margin:0 auto}.section{padding:30px 0}.grid{display:grid;gap:22px}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+    .card{border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.96),rgba(255,255,255,.82));box-shadow:var(--shadow);border-radius:32px;padding:24px}
+    .eyebrow{display:inline-flex;padding:10px 16px;border-radius:999px;background:rgba(213,161,76,.14);border:1px solid rgba(213,161,76,.18);color:#8d6526;font-size:.82rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+    h1{font-size:clamp(2.7rem,6vw,4.6rem);line-height:.95;letter-spacing:-.05em;margin:18px 0 16px} h2{font-size:clamp(1.7rem,4vw,2.3rem);line-height:1.05;letter-spacing:-.03em;margin:0 0 14px}
+    p,.small,label,li{color:var(--muted)} form{display:grid;gap:14px}.field{display:grid;gap:8px} input{width:100%;padding:14px 16px;border-radius:16px;border:1px solid var(--line);background:#fff;font:inherit;color:var(--text)}
+    .btn,.btn-secondary{display:inline-flex;align-items:center;justify-content:center;padding:14px 20px;border-radius:999px;font-weight:800}.btn{background:linear-gradient(135deg,var(--green),var(--gold));color:#fff;border:0}.btn-secondary{background:#fff;border:1px solid var(--line)}
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}.list{list-style:none;padding:0;margin:0;display:grid;gap:10px}.list li{position:relative;padding-left:24px}.list li::before{content:'•';position:absolute;left:6px;color:var(--green);font-weight:900}
+    .portal-card{padding:16px;border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.78)}
+    @media(max-width:900px){.two-col{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <main class="section">
+    <div class="container grid">
+      <section class="card">
+        <span class="eyebrow">Creation DFY referrals</span>
+        <h1>Share a caring DFY offer and earn 25% of the initial sale.</h1>
+        <p>This page gives you a simple email-based affiliate link generator. It is designed as a light referral portal so you can start sharing the offer cleanly.</p>
+        <div class="actions">
+          <a class="btn-secondary" href="index.html">Back to home</a>
+          <a class="btn" href="apply.html" data-ref-link="true">Send people to apply</a>
+        </div>
+      </section>
+
+      <section class="two-col">
+        <div class="card">
+          <h2>Email login / link generator</h2>
+          <form data-affiliate-form>
+            <div class="field">
+              <label for="email">Affiliate email</label>
+              <input id="email" name="email" type="email" placeholder="affiliate@example.com" required />
+            </div>
+            <button class="btn" type="submit">Generate my referral link</button>
+          </form>
+          <div data-affiliate-output style="margin-top:18px;"></div>
+        </div>
+
+        <div class="card">
+          <h2>Program details</h2>
+          <ul class="list">
+            <li><strong>25% commission</strong> on the initial sale only</li>
+            <li>Referral link points directly into the Creation DFY apply flow</li>
+            <li>Referral code is carried into the buyer’s intake path</li>
+            <li>Best for creators, consultants, communities, and trusted referrals</li>
+          </ul>
+          <p class="small" style="margin-top:16px;">Important: this is a lightweight portal and referral-code flow. For payout-grade affiliate tracking, we should next connect it to a real backend datastore and payment system.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+  <script src="referral.js"></script>
+</body>
+</html>

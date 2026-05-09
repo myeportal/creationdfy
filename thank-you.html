@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You | Creation DFY</title>
+  <meta name="description" content="Thank you for choosing Creation DFY. Here is what your setup includes and what happens next." />
+  <style>
+    :root { --bg:#fffaf4; --panel:rgba(255,255,255,.95); --line:rgba(114,92,61,.12); --text:#2e241a; --muted:#6f6253; --green:#4f8a5b; --gold:#d5a14c; --shadow:0 24px 70px rgba(67,43,14,.12); }
+    *{box-sizing:border-box} body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--text);background:linear-gradient(180deg,#fffdf8 0%,#fbf5eb 48%,#f6efe3 100%);line-height:1.65}
+    a{text-decoration:none;color:inherit} .container{width:min(1080px,calc(100% - 32px));margin:0 auto}.section{padding:30px 0}.grid,.two-col{display:grid;gap:22px}.two-col{grid-template-columns:1.06fr .94fr}
+    .card{border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.96),rgba(255,255,255,.82));box-shadow:var(--shadow);border-radius:32px;padding:24px}
+    .eyebrow{display:inline-flex;padding:10px 16px;border-radius:999px;background:rgba(79,138,91,.1);border:1px solid rgba(79,138,91,.18);color:#355f3d;font-size:.82rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+    h1{font-size:clamp(2.8rem,6vw,4.9rem);line-height:.95;letter-spacing:-.05em;margin:18px 0 16px} h2{font-size:clamp(1.8rem,4vw,2.6rem);line-height:1.05;letter-spacing:-.03em;margin:0 0 14px} h3{margin:0 0 10px}
+    p,.small,li{color:var(--muted)} .btn,.btn-secondary{display:inline-flex;align-items:center;justify-content:center;padding:14px 20px;border-radius:999px;font-weight:800}.btn{background:linear-gradient(135deg,var(--green),var(--gold));color:#fff}.btn-secondary{background:#fff;border:1px solid var(--line)} .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+    .list{list-style:none;padding:0;margin:0;display:grid;gap:10px}.list li{position:relative;padding-left:24px}.list li::before{content:'•';position:absolute;left:6px;color:var(--green);font-weight:900}
+    .timeline{display:grid;gap:14px}.timeline .step{padding:16px;border-radius:22px;border:1px solid var(--line);background:rgba(255,255,255,.75)}
+    @media(max-width:900px){.two-col{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <main class="section">
+    <div class="container grid">
+      <section class="card">
+        <span class="eyebrow">Payment received / onboarding next</span>
+        <h1>Thank you. Your idea is officially planted.</h1>
+        <p>This page is written as the post-payment handoff for Creation DFY. It reassures the buyer, explains what gets built, and frames the next phase as a setup-and-growth process instead of a vague agency promise.</p>
+        <div class="actions">
+          <a class="btn" href="apply.html" data-ref-link="true">Return to apply page</a>
+          <a class="btn-secondary" href="index.html">Back to home</a>
+        </div>
+      </section>
+
+      <section class="two-col">
+        <div class="card">
+          <h2>What we are going to build with you</h2>
+          <p>You bring the ideas. We help shape the setup, show how everything works, and get the core build moving so your project has structure, assets, and momentum.</p>
+          <ul class="list">
+            <li>Your core offer direction and positioning</li>
+            <li>Your messaging, promise, and audience framing</li>
+            <li>Your AI-supported setup so creation becomes easier to manage</li>
+            <li>Your foundational pages, content direction, and marketing path</li>
+            <li>Your practical next steps so the project can keep growing after the initial build</li>
+          </ul>
+          <p class="small">We do not just hand you ideas. We help get the setup in place so the idea is planted and growing.</p>
+        </div>
+
+        <div class="card">
+          <h2>What happens next</h2>
+          <div class="timeline">
+            <div class="step"><strong>Step 1:</strong> Payment and intake are confirmed.</div>
+            <div class="step"><strong>Step 2:</strong> We review your idea, stage, goals, and starting materials.</div>
+            <div class="step"><strong>Step 3:</strong> We shape your setup plan, build direction, and growth path.</div>
+            <div class="step"><strong>Step 4:</strong> Your initial Creation DFY setup is built within approximately <strong>15 days</strong>.</div>
+          </div>
+          <p class="small" style="margin-top:16px;">Fine print: the initial setup window is approximately 15 days after completed payment and intake. Larger revisions, add-ons, or client-side delays can extend timing.</p>
+        </div>
+      </section>
+
+      <section class="two-col">
+        <div class="card">
+          <h2>Your protection</h2>
+          <p><strong>30-day money-back guarantee. No questions asked.</strong></p>
+          <p class="small">If the engagement does not feel right in the first 30 days, the buyer can request a refund.</p>
+        </div>
+        <div class="card">
+          <h2>Referral tracking note</h2>
+          <p>If you came through a referral link, that referral code can be carried into your apply/setup flow.</p>
+          <p class="small">Affiliate commission is <strong>25% of the initial sale</strong>.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+  <script src="referral.js"></script>
+</body>
+</html>

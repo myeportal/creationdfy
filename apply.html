@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apply | Creation DFY</title>
+  <meta name="description" content="Apply to work with Creation DFY. Bring your idea, your goals, and your current starting point — we help shape the setup and growth path." />
+  <style>
+    :root {
+      --bg:#fffaf4; --bg-soft:#f6efe3; --panel:rgba(255,255,255,.95); --line:rgba(114,92,61,.12); --text:#2e241a; --muted:#6f6253; --green:#4f8a5b; --gold:#d5a14c; --shadow:0 24px 70px rgba(67,43,14,.12); --radius:26px; --max:1040px;
+    }
+    *{box-sizing:border-box} body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--text);background:linear-gradient(180deg,#fffdf8 0%,#fbf5eb 48%,#f6efe3 100%);line-height:1.65}
+    a{text-decoration:none;color:inherit} .container{width:min(var(--max),calc(100% - 32px));margin:0 auto}.section{padding:30px 0}
+    .hero,.card,.form-card,.info-card{border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.96),rgba(255,255,255,.82));box-shadow:var(--shadow);border-radius:32px}
+    .hero,.card,.form-card,.info-card{padding:24px}.grid,.two-col{display:grid;gap:22px}.two-col{grid-template-columns:1.02fr .98fr}
+    .eyebrow{display:inline-flex;padding:10px 16px;border-radius:999px;background:rgba(213,161,76,.14);border:1px solid rgba(213,161,76,.18);color:#8d6526;font-size:.82rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+    h1{font-size:clamp(2.7rem,6vw,4.8rem);line-height:.95;letter-spacing:-.05em;margin:18px 0 16px} h2{font-size:clamp(1.7rem,4vw,2.5rem);line-height:1.05;letter-spacing:-.03em;margin:0 0 14px} h3{margin:0 0 10px}
+    p,.small,label,li{color:var(--muted)}
+    .actions,.inline-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}.btn,.btn-secondary{display:inline-flex;align-items:center;justify-content:center;padding:14px 20px;border-radius:999px;font-weight:800}.btn{background:linear-gradient(135deg,var(--green),var(--gold));color:#fff}.btn-secondary{background:#fff;border:1px solid var(--line)}
+    form{display:grid;gap:14px} .field{display:grid;gap:8px} input,select,textarea{width:100%;padding:14px 16px;border-radius:16px;border:1px solid var(--line);background:#fff;font:inherit;color:var(--text)} textarea{min-height:120px;resize:vertical}
+    .checklist{list-style:none;padding:0;margin:0;display:grid;gap:10px}.checklist li{position:relative;padding-left:24px}.checklist li::before{content:'•';position:absolute;left:6px;color:var(--green);font-weight:900}
+    .fine-print{font-size:.88rem;color:var(--muted)} .price{font-size:2.8rem;line-height:.92;font-weight:900;letter-spacing:-.05em;color:#355f3d;margin:8px 0} .pill{display:inline-block;padding:8px 14px;border-radius:999px;background:rgba(79,138,91,.1);border:1px solid rgba(79,138,91,.18);color:#355f3d;font-weight:700}
+    @media(max-width:900px){.two-col{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <main class="section">
+    <div class="container grid">
+      <section class="hero">
+        <span class="eyebrow">Apply to work with Creation DFY</span>
+        <h1>Bring the idea. We’ll help get it planted and growing.</h1>
+        <p>Use this page to tell us what you want to build, who it’s for, and where you currently feel stuck. We help turn your ideas into a real setup, clear path, and growing digital presence.</p>
+        <div class="inline-actions">
+          <a class="btn-secondary" href="index.html">Back to home</a>
+          <a class="btn" href="affiliate.html" data-ref-link="true">Affiliate referrals</a>
+        </div>
+      </section>
+
+      <section class="two-col">
+        <div class="form-card">
+          <h2>Contact / apply form</h2>
+          <p class="small">This can be replaced with your real form handler later. For now, it captures the exact questions your intake should ask.</p>
+          <form action="thank-you.html" method="get">
+            <div class="field">
+              <label for="name">Full name</label>
+              <input id="name" name="name" type="text" placeholder="Your full name" required />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" required />
+            </div>
+            <div class="field">
+              <label for="idea">What idea do you want help bringing to life?</label>
+              <textarea id="idea" name="idea" placeholder="Describe the business, service, offer, product, audience, or vision you want help building."></textarea>
+            </div>
+            <div class="field">
+              <label for="stage">What stage are you in?</label>
+              <select id="stage" name="stage">
+                <option value="just-an-idea">Just an idea</option>
+                <option value="rough-draft">Rough draft / loose concept</option>
+                <option value="offer-exists">Offer exists but needs setup</option>
+                <option value="rebrand-or-rebuild">Rebrand / rebuild needed</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="need">What do you need most?</label>
+              <select id="need" name="need">
+                <option value="offer-and-positioning">Offer and positioning</option>
+                <option value="site-and-assets">Site and assets</option>
+                <option value="ai-setup">AI workflow setup</option>
+                <option value="marketing-system">Marketing system</option>
+                <option value="all-of-it">All of it, done for me</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="payment">Preferred payment option</label>
+              <select id="payment" name="payment">
+                <option value="annual">$1,750 annual</option>
+                <option value="monthly">12 monthly installments</option>
+              </select>
+            </div>
+            <input type="hidden" name="ref" value="" data-ref-input />
+            <div class="field">
+              <label><input type="checkbox" required /> I understand the engagement includes a 30-day no-questions-asked money-back guarantee.</label>
+            </div>
+            <div class="field">
+              <label><input type="checkbox" required /> I understand initial setup begins after payment and the core setup window is approximately 15 days.</label>
+            </div>
+            <div class="actions">
+              <button class="btn" type="submit">Continue to setup thank-you page</button>
+            </div>
+            <p class="fine-print">Fine print: Creation DFY setup is designed to get your offer, assets, workflow, and growth path planted and moving within approximately 15 days from completed payment and intake.</p>
+          </form>
+        </div>
+
+        <div class="grid">
+          <div class="info-card">
+            <span class="pill">What we help build</span>
+            <h3>We take your idea and show you how to do everything — while helping get it set up for you.</h3>
+            <ul class="checklist">
+              <li>Offer shaping and positioning</li>
+              <li>AI-supported setup and working systems</li>
+              <li>Sales and message structure</li>
+              <li>Launch-ready page and content direction</li>
+              <li>Growth path that feels planted, organized, and real</li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <span class="pill">Pricing</span>
+            <div class="price">$1,750</div>
+            <p><strong>Annual engagement</strong> or split into <strong>12 monthly installments</strong>.</p>
+            <p class="small">30-day money-back guarantee. No questions asked.</p>
+          </div>
+          <div class="info-card">
+            <span class="pill">Referral tracking</span>
+            <h3>Affiliate referrals supported</h3>
+            <p>If you arrived from an affiliate link, the referral code carries through this apply flow automatically.</p>
+            <p class="small">Commission model: <strong>25% of the initial sale</strong>.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <script src="referral.js"></script>
+</body>
+</html>
