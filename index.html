@@ -240,142 +240,101 @@
       overflow: hidden;
       position: relative;
       min-height: 100%;
-      padding: 26px;
+      padding: 18px;
       background:
         radial-gradient(circle at top left, rgba(122, 172, 113, 0.18), transparent 26%),
         radial-gradient(circle at top right, rgba(213, 161, 76, 0.16), transparent 24%),
         linear-gradient(180deg, rgba(255,255,255,0.98), rgba(246,239,227,0.92));
     }
 
-    .visual-growth {
-      position: relative;
-      min-height: 520px;
-      border-radius: 28px;
-      border: 1px solid rgba(114, 92, 61, 0.1);
-      background:
-        radial-gradient(circle at 20% 18%, rgba(213,161,76,0.14), transparent 20%),
-        radial-gradient(circle at 78% 20%, rgba(79,138,91,0.12), transparent 24%),
-        linear-gradient(180deg, #fffdf8 0%, #edf4e8 54%, #e0eed9 100%);
-      overflow: hidden;
-    }
-
-    .growth-sun {
-      position: absolute;
-      top: 40px;
-      right: 54px;
-      width: 110px;
-      height: 110px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(255,239,196,0.95) 0%, rgba(255,230,164,0.72) 55%, rgba(255,230,164,0) 75%);
-    }
-
-    .growth-ground {
-      position: absolute;
-      left: 24px;
-      right: 24px;
-      bottom: 18px;
-      height: 120px;
-      border-radius: 999px;
-      background: radial-gradient(circle at 50% 0%, rgba(130,173,115,0.24), rgba(130,173,115,0.04) 55%, rgba(130,173,115,0) 72%);
-    }
-
-    .growth-seed,
-    .growth-sprout,
-    .growth-tree-trunk,
-    .growth-tree-crown,
-    .growth-copy {
-      position: absolute;
-    }
-
-    .growth-seed {
-      left: 92px;
-      bottom: 96px;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background: #7c5528;
-      box-shadow: 0 0 0 14px rgba(124, 85, 40, 0.07);
-    }
-
-    .growth-sprout {
-      left: 198px;
-      bottom: 100px;
-      width: 10px;
-      height: 92px;
-      border-radius: 999px;
-      background: linear-gradient(180deg, #7fbe77, #4f8a5b);
-    }
-
-    .growth-sprout::before,
-    .growth-sprout::after {
-      content: "";
-      position: absolute;
-      top: 12px;
-      width: 42px;
-      height: 24px;
-      border-radius: 999px;
-      background: linear-gradient(135deg, #8fd084, #66a668);
-    }
-
-    .growth-sprout::before { right: 5px; transform: rotate(-24deg); }
-    .growth-sprout::after { left: 5px; transform: rotate(24deg); }
-
-    .growth-path {
-      position: absolute;
-      left: 114px;
-      bottom: 160px;
-      width: 180px;
-      height: 120px;
-      border-bottom: 3px dashed rgba(213,161,76,0.72);
-      border-radius: 0 0 140px 140px;
-      transform: rotate(-10deg);
-    }
-
-    .growth-tree-trunk {
-      right: 120px;
-      bottom: 102px;
-      width: 18px;
-      height: 150px;
-      border-radius: 999px;
-      background: linear-gradient(180deg, #875b2d, #5c3e20);
-    }
-
-    .growth-tree-trunk::before,
-    .growth-tree-trunk::after {
-      content: "";
-      position: absolute;
-      width: 72px;
-      height: 10px;
-      border-radius: 999px;
-      background: #6f4b25;
-      top: 36px;
-    }
-
-    .growth-tree-trunk::before { left: -56px; transform: rotate(-38deg); }
-    .growth-tree-trunk::after { right: -56px; transform: rotate(38deg); }
-
-    .growth-tree-crown {
-      right: 50px;
-      bottom: 196px;
-      width: 170px;
-      height: 170px;
-      border-radius: 50%;
-      background: radial-gradient(circle at 50% 42%, #9ad08d 0%, #76b36e 52%, #4f8a5b 100%);
-      box-shadow: -58px 18px 0 -18px rgba(111,170,98,0.9), 58px 22px 0 -18px rgba(98,158,90,0.88), 0 -54px 0 -14px rgba(135,202,123,0.9);
-    }
-
-    .growth-copy {
-      left: 34px;
-      right: 34px;
-      top: 28px;
-      padding: 20px;
+    .visual img {
+      width: 100%;
+      aspect-ratio: 4 / 3.2;
+      object-fit: cover;
       border-radius: 24px;
-      background: rgba(255,253,248,0.78);
-      border: 1px solid rgba(114, 92, 61, 0.1);
-      backdrop-filter: blur(8px);
+      border: 1px solid rgba(114, 92, 61, 0.12);
     }
 
-    .growth-copy p { margin: 8px 0 0; }
+    .visual-overlay {
+      margin-top: 16px;
+      padding: 18px;
+      border-radius: 22px;
+      background: rgba(255, 253, 248, 0.88);
+      border: 1px solid rgba(114, 92, 61, 0.12);
+      backdrop-filter: blur(10px);
+    }
+
+    .video-block {
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(255,255,255,0.82));
+      box-shadow: var(--shadow);
+      padding: 24px;
+    }
+
+    .video-shell {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 26px;
+      overflow: hidden;
+      border: 1px solid rgba(114, 92, 61, 0.12);
+      background: #e9e1d4;
+    }
+
+    .video-shell iframe,
+    .video-shell img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .video-shell img {
+      object-fit: cover;
+    }
+
+    .video-placeholder {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(0,0,0,0.14));
+      pointer-events: none;
+    }
+
+    .play-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 22px;
+      border-radius: 999px;
+      background: rgba(255, 253, 248, 0.92);
+      color: var(--text);
+      font-weight: 800;
+      box-shadow: 0 18px 40px rgba(67, 43, 14, 0.16);
+    }
+
+    .play-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--green), var(--gold));
+      position: relative;
+      display: inline-block;
+    }
+
+    .play-icon::before {
+      content: "";
+      position: absolute;
+      left: 16px;
+      top: 11px;
+      border-left: 14px solid #fff;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+    }
 
     .tree-reel {
       margin-top: 18px;
@@ -665,18 +624,10 @@
         </div>
 
         <div class="visual">
-          <div class="visual-growth" aria-label="Creation DFY growth visual">
-            <div class="growth-sun"></div>
-            <div class="growth-copy">
-              <strong>What we do for you</strong>
-              <p class="small">We turn scattered ideas into a polished offer, clear messaging, AI-supported workflows, digital assets, and a marketing-ready launch path — without making you become the tech department.</p>
-            </div>
-            <div class="growth-seed"></div>
-            <div class="growth-path"></div>
-            <div class="growth-sprout"></div>
-            <div class="growth-tree-trunk"></div>
-            <div class="growth-tree-crown"></div>
-            <div class="growth-ground"></div>
+          <img src="assets/creationdfy-main-visual.jpg" alt="Creation DFY strategy and consulting visual" />
+          <div class="visual-overlay">
+            <strong>What we do for you</strong>
+            <p class="small">We turn scattered ideas into a polished offer, clear messaging, AI-supported workflows, digital assets, and a marketing-ready launch path — without making you become the tech department.</p>
           </div>
         </div>
       </div>
@@ -687,6 +638,25 @@
         <div class="stat card"><strong>1 offer</strong><span>Simple pricing with one clear decision instead of a ladder of upsells.</span></div>
         <div class="stat card"><strong>12 months</strong><span>Annual engagement with the option to split it into 12 monthly payments.</span></div>
         <div class="stat card"><strong>30 days</strong><span>No-questions-asked money-back guarantee if it does not feel right.</span></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="video-block">
+          <div class="section-head" style="margin-bottom:18px; max-width:900px;">
+            <span class="eyebrow">Video walkthrough</span>
+            <h2>Drop your YouTube video here later — for now the branded visual holds the spot.</h2>
+            <p>When you're ready, replace the placeholder video ID in the page code and this section becomes your embedded walkthrough, pitch, or explainer.</p>
+          </div>
+          <div class="video-shell">
+            <img src="assets/creationdfy-main-visual.jpg" alt="Creation DFY video placeholder image" />
+            <iframe id="creationdfy-video" src="about:blank" title="Creation DFY video placeholder" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="video-placeholder" data-video-placeholder>
+              <div class="play-badge"><span class="play-icon"></span>Video slot ready for your YouTube link</div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -886,29 +856,28 @@
   <script src="referral.js"></script>
   <script>
     (function () {
+      const VIDEO_ID = 'YOUR_YOUTUBE_VIDEO_ID';
+      const iframe = document.getElementById('creationdfy-video');
+      const placeholder = document.querySelector('[data-video-placeholder]');
+      if (iframe && VIDEO_ID && VIDEO_ID !== 'YOUR_YOUTUBE_VIDEO_ID') {
+        iframe.src = 'https://www.youtube.com/embed/' + VIDEO_ID + '?rel=0&modestbranding=1';
+        if (placeholder) placeholder.style.display = 'none';
+      } else if (iframe) {
+        iframe.style.display = 'none';
+      }
+
       const sticky = document.querySelector('[data-sticky-cta]');
       const closeBtn = document.querySelector('[data-sticky-close]');
       const footer = document.querySelector('footer');
       if (!sticky || !closeBtn || !footer) return;
 
       let docked = false;
-      const placeholder = document.createElement('div');
-      placeholder.style.height = '0px';
-      sticky.parentNode.insertBefore(placeholder, sticky.nextSibling);
-
-      function undock() {
-        if (!docked) return;
-        document.body.appendChild(sticky);
-        sticky.classList.remove('is-docked');
-        placeholder.style.height = '0px';
-        docked = false;
-      }
+      const dockHost = sticky.parentNode;
 
       function dock() {
         if (docked) return;
-        footer.parentNode.insertBefore(sticky, footer);
+        dockHost.insertBefore(sticky, dockHost.firstChild);
         sticky.classList.add('is-docked');
-        placeholder.style.height = '0px';
         docked = true;
       }
 
