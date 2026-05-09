@@ -354,91 +354,125 @@
       padding: 18px;
       border-radius: 24px;
       background:
-        linear-gradient(135deg, rgba(79, 138, 91, 0.18), rgba(213, 161, 76, 0.18)),
+        linear-gradient(135deg, rgba(79, 138, 91, 0.12), rgba(213, 161, 76, 0.14)),
         var(--cream);
       border: 1px solid rgba(114, 92, 61, 0.1);
     }
 
     .tree-reel .reel-frame {
       position: relative;
-      min-height: 230px;
+      min-height: 270px;
       border-radius: 22px;
       overflow: hidden;
       background:
-        radial-gradient(circle at 50% 80%, rgba(79, 138, 91, 0.26), transparent 22%),
-        linear-gradient(180deg, #f8f4eb 0%, #ebf4ea 45%, #d8ead4 100%);
+        radial-gradient(circle at 15% 18%, rgba(213,161,76,0.12), transparent 18%),
+        radial-gradient(circle at 85% 22%, rgba(79,138,91,0.12), transparent 22%),
+        linear-gradient(180deg, #fffdf8 0%, #eef5e9 52%, #e1edd8 100%);
       border: 1px solid rgba(114, 92, 61, 0.1);
     }
 
-    .tree-reel .seed,
-    .tree-reel .sprout,
-    .tree-reel .tree {
+    .tree-scene {
       position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      border-radius: 999px;
+      inset: 0;
     }
 
-    .tree-reel .seed {
-      bottom: 36px;
-      width: 16px;
-      height: 16px;
-      background: #6d4b23;
-      box-shadow: 0 0 0 12px rgba(109, 75, 35, 0.06);
-    }
-
-    .tree-reel .sprout {
-      bottom: 50px;
-      width: 8px;
-      height: 70px;
-      background: linear-gradient(180deg, #6aa56e, #447949);
-    }
-
-    .tree-reel .sprout::before,
-    .tree-reel .sprout::after {
-      content: "";
+    .tree-glow {
       position: absolute;
-      top: 10px;
-      width: 34px;
-      height: 18px;
-      background: linear-gradient(135deg, #7fc57b, #5c995f);
-      border-radius: 999px 999px 999px 999px;
+      width: 140px;
+      height: 140px;
+      right: 54px;
+      top: 34px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,240,198,0.95) 0%, rgba(255,228,161,0.55) 52%, rgba(255,228,161,0) 74%);
     }
 
-    .tree-reel .sprout::before { right: 4px; transform: rotate(-24deg); }
-    .tree-reel .sprout::after { left: 4px; transform: rotate(24deg); }
-
-    .tree-reel .tree {
+    .tree-ground {
+      position: absolute;
+      left: 28px;
+      right: 28px;
       bottom: 46px;
-      width: 12px;
-      height: 112px;
-      background: linear-gradient(180deg, #78522a, #52371d);
+      height: 72px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 50% 30%, rgba(132,176,116,0.24), rgba(132,176,116,0.08) 56%, rgba(132,176,116,0) 74%);
     }
 
-    .tree-reel .tree::before,
-    .tree-reel .tree::after {
-      content: "";
-      position: absolute;
-      width: 120px;
-      height: 120px;
-      background: radial-gradient(circle at 50% 50%, #7fbe77 0%, #5b9657 68%, #4b7f49 100%);
-      border-radius: 50%;
-      top: -48px;
-    }
-
-    .tree-reel .tree::before { left: -76px; }
-    .tree-reel .tree::after { right: -76px; }
-
-    .tree-reel .tree-crown {
+    .tree-canopy {
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
-      bottom: 118px;
-      width: 134px;
-      height: 134px;
-      background: radial-gradient(circle at 50% 50%, #8ccf80 0%, #5d9959 68%, #4d834b 100%);
+      top: 54px;
+      width: 190px;
+      height: 190px;
       border-radius: 50%;
-      box-shadow: 0 18px 40px rgba(79, 138, 91, 0.18);
+      background: radial-gradient(circle at 50% 36%, #98d48c 0%, #75b76d 55%, #4f8a5b 100%);
+      box-shadow:
+        -86px 34px 0 -28px rgba(100,162,93,0.98),
+        88px 30px 0 -28px rgba(95,154,88,0.96),
+        0 -42px 0 -18px rgba(144,205,131,0.9),
+        0 26px 42px rgba(79,138,91,0.16);
+    }
+
+    .tree-trunk {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 176px;
+      width: 18px;
+      height: 110px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, #8a5d30, #5b3c1f);
+      box-shadow: inset 2px 0 0 rgba(255,255,255,0.08);
+    }
+
+    .tree-branch {
+      position: absolute;
+      width: 70px;
+      height: 10px;
+      border-radius: 999px;
+      background: #6f4b25;
+      top: 208px;
+      left: 50%;
+      transform-origin: left center;
+    }
+
+    .tree-branch.branch-left { transform: translateX(-6px) rotate(-36deg); margin-left: -54px; }
+    .tree-branch.branch-right { transform: translateX(6px) rotate(36deg); margin-left: 0; }
+
+    .tree-root {
+      position: absolute;
+      width: 88px;
+      height: 52px;
+      border-bottom: 5px solid #80572a;
+      border-radius: 0 0 90px 90px;
+      bottom: 64px;
+      left: 50%;
+      transform-origin: top center;
+    }
+
+    .tree-root.root-left { transform: translateX(-86px) rotate(16deg); }
+    .tree-root.root-right { transform: translateX(-2px) rotate(-16deg); }
+    .tree-root.root-center { width: 52px; left: 50%; transform: translateX(-50%); bottom: 60px; }
+
+    .tree-seedline {
+      position: absolute;
+      left: 56px;
+      bottom: 88px;
+      width: 126px;
+      height: 86px;
+      border-bottom: 3px dashed rgba(213,161,76,0.72);
+      border-radius: 0 0 120px 120px;
+      transform: rotate(-8deg);
+    }
+
+    .tree-seed {
+      position: absolute;
+      left: 62px;
+      bottom: 68px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #7b5428;
+      box-shadow: 0 0 0 12px rgba(123, 84, 40, 0.06);
     }
 
     .section {
@@ -627,12 +661,21 @@
             <a class="btn-secondary" href="affiliate.html">Affiliates earn 25%</a>
           </div>
           <div class="tree-reel">
-            <div class="small" style="margin-bottom:10px;"><strong style="color:var(--text);">Dreams to fruition visual concept</strong> — light tree-growth storytelling baked into the brand direction.</div>
-            <div class="reel-frame" aria-label="Tree growth visual metaphor">
-              <div class="seed"></div>
-              <div class="sprout"></div>
-              <div class="tree"></div>
-              <div class="tree-crown"></div>
+            <div class="small" style="margin-bottom:10px;"><strong style="color:var(--text);">Dreams to fruition visual concept</strong> — rooted, grounded growth from idea to something strong and visible.</div>
+            <div class="reel-frame" aria-label="Rooted tree growth visual metaphor">
+              <div class="tree-scene">
+                <div class="tree-glow"></div>
+                <div class="tree-canopy"></div>
+                <div class="tree-trunk"></div>
+                <div class="tree-branch branch-left"></div>
+                <div class="tree-branch branch-right"></div>
+                <div class="tree-root root-left"></div>
+                <div class="tree-root root-right"></div>
+                <div class="tree-root root-center"></div>
+                <div class="tree-seedline"></div>
+                <div class="tree-seed"></div>
+                <div class="tree-ground"></div>
+              </div>
             </div>
           </div>
         </div>
