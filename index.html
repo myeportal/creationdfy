@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creation DFY | Done-For-You AI Setup & Digital Marketing Agency</title>
+  <meta name="description" content="Creation DFY helps people with strong ideas but no build team turn those ideas into polished digital products, AI workflows, offers, funnels, and marketing systems — done for you." />
+  <style>
+    :root {
+      --bg: #fffaf4;
+      --bg-soft: #f6efe3;
+      --panel: rgba(255,255,255,0.82);
+      --panel-strong: rgba(255,255,255,0.96);
+      --line: rgba(114, 92, 61, 0.12);
+      --text: #2e241a;
+      --muted: #6f6253;
+      --green: #4f8a5b;
+      --green-deep: #355f3d;
+      --gold: #d5a14c;
+      --gold-soft: rgba(213, 161, 76, 0.14);
+      --cream: #fffdf8;
+      --shadow: 0 24px 70px rgba(67, 43, 14, 0.12);
+      --radius-xl: 32px;
+      --radius-lg: 24px;
+      --radius-md: 18px;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(122, 172, 113, 0.14), transparent 24%),
+        radial-gradient(circle at top right, rgba(213, 161, 76, 0.12), transparent 22%),
+        linear-gradient(180deg, #fffdf8 0%, #fbf5eb 45%, #f6efe3 100%);
+      line-height: 1.65;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    .container {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: var(--gold-soft);
+      border: 1px solid rgba(213, 161, 76, 0.18);
+      color: #8d6526;
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      backdrop-filter: blur(16px);
+      background: rgba(255, 250, 244, 0.84);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 16px 0;
+    }
+
+    .brand strong {
+      display: block;
+      font-size: 1rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .brand span {
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .nav-links a,
+    .btn,
+    .btn-secondary,
+    .sticky-cta a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 20px;
+      border-radius: 999px;
+      font-weight: 800;
+      transition: transform .2s ease, box-shadow .2s ease, opacity .2s ease;
+    }
+
+    .nav-links a,
+    .btn-secondary {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.74);
+    }
+
+    .btn,
+    .sticky-cta a {
+      color: #fff;
+      background: linear-gradient(135deg, var(--green), var(--gold));
+      box-shadow: 0 16px 38px rgba(79, 138, 91, 0.22);
+    }
+
+    .nav-links a:hover,
+    .btn:hover,
+    .btn-secondary:hover,
+    .sticky-cta a:hover {
+      transform: translateY(-2px);
+    }
+
+    .hero {
+      padding: 62px 0 30px;
+    }
+
+    .hero-grid,
+    .stats-grid,
+    .service-grid,
+    .steps-grid,
+    .proof-grid,
+    .faq-grid,
+    .two-col,
+    .results-grid,
+    .promise-grid {
+      display: grid;
+      gap: 22px;
+    }
+
+    .hero-grid { grid-template-columns: 1.08fr 0.92fr; align-items: center; }
+    .stats-grid { grid-template-columns: repeat(3, 1fr); }
+    .service-grid, .proof-grid, .results-grid { grid-template-columns: repeat(3, 1fr); }
+    .steps-grid, .promise-grid, .two-col { grid-template-columns: repeat(2, 1fr); }
+    .faq-grid { grid-template-columns: repeat(2, 1fr); }
+
+    h1 {
+      font-size: clamp(3rem, 6vw, 5.6rem);
+      line-height: 0.94;
+      letter-spacing: -0.05em;
+      margin: 18px 0 18px;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.03;
+      letter-spacing: -0.04em;
+      margin: 0 0 14px;
+    }
+
+    h3 {
+      margin: 0 0 10px;
+      font-size: 1.16rem;
+    }
+
+    p, li, .muted, .small {
+      color: var(--muted);
+    }
+
+    .hero-copy p.lead {
+      font-size: 1.08rem;
+      max-width: 800px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .card,
+    .stat,
+    .service,
+    .step,
+    .proof,
+    .faq,
+    .result,
+    .promise,
+    .pricing-card,
+    .founder-note,
+    .visual,
+    .story-card {
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(255,255,255,0.78));
+      box-shadow: var(--shadow);
+    }
+
+    .card,
+    .service,
+    .step,
+    .proof,
+    .faq,
+    .result,
+    .promise,
+    .pricing-card,
+    .founder-note,
+    .story-card {
+      padding: 24px;
+    }
+
+    .visual {
+      overflow: hidden;
+      position: relative;
+      min-height: 100%;
+    }
+
+    .visual img {
+      width: 100%;
+      aspect-ratio: 4 / 4.2;
+      object-fit: cover;
+    }
+
+    .visual-overlay {
+      position: absolute;
+      inset: auto 20px 20px 20px;
+      background: rgba(255, 253, 248, 0.88);
+      border: 1px solid rgba(114, 92, 61, 0.12);
+      border-radius: 22px;
+      padding: 18px;
+      backdrop-filter: blur(10px);
+    }
+
+    .tree-reel {
+      margin-top: 18px;
+      padding: 18px;
+      border-radius: 24px;
+      background:
+        linear-gradient(135deg, rgba(79, 138, 91, 0.18), rgba(213, 161, 76, 0.18)),
+        var(--cream);
+      border: 1px solid rgba(114, 92, 61, 0.1);
+    }
+
+    .tree-reel .reel-frame {
+      position: relative;
+      min-height: 230px;
+      border-radius: 22px;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 50% 80%, rgba(79, 138, 91, 0.26), transparent 22%),
+        linear-gradient(180deg, #f8f4eb 0%, #ebf4ea 45%, #d8ead4 100%);
+      border: 1px solid rgba(114, 92, 61, 0.1);
+    }
+
+    .tree-reel .seed,
+    .tree-reel .sprout,
+    .tree-reel .tree {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 999px;
+    }
+
+    .tree-reel .seed {
+      bottom: 36px;
+      width: 16px;
+      height: 16px;
+      background: #6d4b23;
+      box-shadow: 0 0 0 12px rgba(109, 75, 35, 0.06);
+    }
+
+    .tree-reel .sprout {
+      bottom: 50px;
+      width: 8px;
+      height: 70px;
+      background: linear-gradient(180deg, #6aa56e, #447949);
+    }
+
+    .tree-reel .sprout::before,
+    .tree-reel .sprout::after {
+      content: "";
+      position: absolute;
+      top: 10px;
+      width: 34px;
+      height: 18px;
+      background: linear-gradient(135deg, #7fc57b, #5c995f);
+      border-radius: 999px 999px 999px 999px;
+    }
+
+    .tree-reel .sprout::before { right: 4px; transform: rotate(-24deg); }
+    .tree-reel .sprout::after { left: 4px; transform: rotate(24deg); }
+
+    .tree-reel .tree {
+      bottom: 46px;
+      width: 12px;
+      height: 112px;
+      background: linear-gradient(180deg, #78522a, #52371d);
+    }
+
+    .tree-reel .tree::before,
+    .tree-reel .tree::after {
+      content: "";
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      background: radial-gradient(circle at 50% 50%, #7fbe77 0%, #5b9657 68%, #4b7f49 100%);
+      border-radius: 50%;
+      top: -48px;
+    }
+
+    .tree-reel .tree::before { left: -76px; }
+    .tree-reel .tree::after { right: -76px; }
+
+    .tree-reel .tree-crown {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 118px;
+      width: 134px;
+      height: 134px;
+      background: radial-gradient(circle at 50% 50%, #8ccf80 0%, #5d9959 68%, #4d834b 100%);
+      border-radius: 50%;
+      box-shadow: 0 18px 40px rgba(79, 138, 91, 0.18);
+    }
+
+    .section {
+      padding: 30px 0;
+    }
+
+    .section-head {
+      max-width: 760px;
+      margin-bottom: 22px;
+    }
+
+    .stat strong,
+    .price-figure,
+    .big-number {
+      display: block;
+      color: var(--green-deep);
+      font-weight: 900;
+      letter-spacing: -0.04em;
+    }
+
+    .stat strong { font-size: 2rem; }
+    .price-figure { font-size: clamp(3rem, 7vw, 5rem); line-height: 0.92; margin: 10px 0; }
+    .big-number { font-size: 2.2rem; }
+
+    ul.checks {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    ul.checks li {
+      position: relative;
+      padding-left: 28px;
+    }
+
+    ul.checks li::before {
+      content: "•";
+      position: absolute;
+      left: 8px;
+      color: var(--green);
+      font-weight: 900;
+    }
+
+    .pricing-card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(245,239,227,0.96));
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: 1.12fr 0.88fr;
+      gap: 22px;
+      align-items: start;
+    }
+
+    .guarantee {
+      padding: 18px;
+      border-radius: 20px;
+      background: rgba(79, 138, 91, 0.08);
+      border: 1px solid rgba(79, 138, 91, 0.16);
+      margin-top: 18px;
+    }
+
+    .sticky-cta {
+      position: sticky;
+      bottom: 18px;
+      z-index: 20;
+      padding: 0 16px 18px;
+      display: flex;
+      justify-content: center;
+      pointer-events: none;
+    }
+
+    .sticky-cta .bar {
+      width: min(980px, 100%);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 14px;
+      border-radius: 999px;
+      background: rgba(255, 253, 248, 0.94);
+      border: 1px solid rgba(114, 92, 61, 0.12);
+      box-shadow: 0 18px 50px rgba(67, 43, 14, 0.12);
+      pointer-events: auto;
+    }
+
+    .sticky-cta .copy strong { display: block; }
+    .sticky-cta .copy span { color: var(--muted); font-size: 0.92rem; }
+
+    footer {
+      padding: 10px 0 48px;
+    }
+
+    @media (max-width: 1024px) {
+      .hero-grid,
+      .pricing-grid,
+      .steps-grid,
+      .promise-grid,
+      .two-col,
+      .faq-grid,
+      .service-grid,
+      .proof-grid,
+      .results-grid,
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .nav { flex-direction: column; align-items: stretch; }
+      .nav-links { justify-content: center; }
+      .hero { padding-top: 40px; }
+      .sticky-cta .bar { border-radius: 26px; flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <div class="brand">
+        <strong>Creation DFY</strong>
+        <span>Done-for-you AI setup & digital marketing agency</span>
+      </div>
+      <nav class="nav-links">
+        <a href="#how">How it works</a>
+        <a href="#services">What we build</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Warm, done-for-you growth for people with real ideas</span>
+          <h1>Bring your <span style="color:var(--green);">dreams to fruition</span> without having to build everything alone.</h1>
+          <p class="lead">Creation DFY is a done-for-you AI setup and digital marketing agency for founders, creators, experts, and everyday people who have strong ideas but no team, no system, and no clear path to turn those ideas into something valuable. We take your concept and turn it into a real build with care, structure, and momentum.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#pricing">Start your DFY build</a>
+            <a class="btn-secondary" href="#services">See what we handle</a>
+          </div>
+          <div class="tree-reel">
+            <div class="small" style="margin-bottom:10px;"><strong style="color:var(--text);">Dreams to fruition visual concept</strong> — light tree-growth storytelling baked into the brand direction.</div>
+            <div class="reel-frame" aria-label="Tree growth visual metaphor">
+              <div class="seed"></div>
+              <div class="sprout"></div>
+              <div class="tree"></div>
+              <div class="tree-crown"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="visual">
+          <img src="assets/hero-banner.jpg" alt="Creation DFY warm growth-oriented agency visual" />
+          <div class="visual-overlay">
+            <strong>What we do for you</strong>
+            <p class="small">We turn scattered ideas into a polished offer, clear messaging, AI-supported workflows, digital assets, and a marketing-ready launch path — without making you become a tech expert first.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container stats-grid">
+        <div class="stat card"><strong>1 offer</strong><span>Simple pricing with one clear decision instead of a ladder of upsells.</span></div>
+        <div class="stat card"><strong>12 months</strong><span>Annual engagement with the option to split it into 12 monthly payments.</span></div>
+        <div class="stat card"><strong>30 days</strong><span>No-questions-asked money-back guarantee if it does not feel right.</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">What we build</span>
+          <h2>Done-for-you creation, positioning, AI setup, and digital marketing — all under one warm, capable roof.</h2>
+          <p>Everything here is branded and delivered as Creation DFY. The focus is simple: help good people with good ideas finally get something real built.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service">
+            <h3>Offer creation & packaging</h3>
+            <p>We shape your idea into a clean offer with messaging, positioning, pricing clarity, promise structure, and a buyer-friendly path.</p>
+          </article>
+          <article class="service">
+            <h3>AI workflow setup</h3>
+            <p>We configure practical AI support for research, content drafting, launch planning, internal SOPs, and business execution so your project is easier to run.</p>
+          </article>
+          <article class="service">
+            <h3>Digital asset buildout</h3>
+            <p>Landing pages, lead magnets, sales copy, nurture content, brand direction, and launch materials — built for you instead of dumped on you.</p>
+          </article>
+          <article class="service">
+            <h3>Marketing system assembly</h3>
+            <p>We help connect the pieces: core page messaging, offer flow, funnel logic, CTA structure, content angles, and rollout planning.</p>
+          </article>
+          <article class="service">
+            <h3>Warm strategy support</h3>
+            <p>We are not here to overwhelm you with jargon. We guide the process in plain language so you feel supported while your idea grows.</p>
+          </article>
+          <article class="service">
+            <h3>White-label leverage</h3>
+            <p>The underlying model pulls from proven idea-to-creation frameworks, but the experience is fully rebranded around Creation DFY for your agency-facing delivery.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="how">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">How it works</span>
+          <h2>From seed to something strong enough to stand on its own.</h2>
+        </div>
+        <div class="steps-grid">
+          <div class="step">
+            <div class="big-number">01</div>
+            <h3>You bring the idea</h3>
+            <p>You may have a dream, rough notes, market intuition, lived experience, or a half-formed concept. That is enough to start.</p>
+          </div>
+          <div class="step">
+            <div class="big-number">02</div>
+            <h3>We shape the path</h3>
+            <p>We translate the idea into an offer, audience, message, asset plan, and execution roadmap using our done-for-you process.</p>
+          </div>
+          <div class="step">
+            <div class="big-number">03</div>
+            <h3>We build the system</h3>
+            <p>Pages, positioning, AI workflow support, launch assets, and core digital infrastructure get assembled for you.</p>
+          </div>
+          <div class="step">
+            <div class="big-number">04</div>
+            <h3>You move forward with confidence</h3>
+            <p>Instead of staring at a dream that never leaves your notebook, you now have a real vehicle for growth.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container two-col">
+        <div class="story-card">
+          <span class="eyebrow">Who this is for</span>
+          <h2>Built for people with vision, not just people with teams.</h2>
+          <ul class="checks">
+            <li>You have a strong idea but no clear execution system.</li>
+            <li>You know your idea could help people, but you do not know how to package or launch it.</li>
+            <li>You feel stuck between inspiration and overwhelm.</li>
+            <li>You want AI to help, but you do not want to become your own full-time operator, copywriter, strategist, and tech stack manager.</li>
+            <li>You would rather hire caring, capable help and finally move forward.</li>
+          </ul>
+        </div>
+        <div class="founder-note">
+          <span class="eyebrow">The promise</span>
+          <h2>We do not sell noise. We help people grow something meaningful.</h2>
+          <p>Creation DFY is designed to feel steady, warm, and deeply useful. The work is grounded in business-building, but the emotional core is simple: people deserve help bringing good ideas into the world.</p>
+          <p>If your idea feels important to you, we treat it that way.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">What your build can include</span>
+          <h2>We help turn one idea into a visible, marketable, usable business asset.</h2>
+        </div>
+        <div class="results-grid">
+          <div class="result"><h3>Brand direction</h3><p>Name framing, promise clarity, visual tone, and positioning language that make the idea feel real.</p></div>
+          <div class="result"><h3>Sales foundation</h3><p>Core page structure, persuasive copy, CTA logic, FAQ handling, and trust-building messaging.</p></div>
+          <div class="result"><h3>Content system</h3><p>Email angles, nurture messaging, offer hooks, social/video ideas, and launch support assets.</p></div>
+          <div class="result"><h3>AI operating layer</h3><p>Prompt systems and workflows that support faster ongoing creation without chaos.</p></div>
+          <div class="result"><h3>Offer refinement</h3><p>Sharper service packaging, clearer outcomes, and a more compelling path to yes.</p></div>
+          <div class="result"><h3>Launch readiness</h3><p>The pieces assembled so your project can actually move instead of staying theoretical.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pricing">
+      <div class="container pricing-grid">
+        <div class="pricing-card">
+          <span class="eyebrow">Simple pricing</span>
+          <h2>One clear Creation DFY engagement.</h2>
+          <div class="price-figure">$1,750</div>
+          <p><strong>Annual engagement</strong> with the option to pay in <strong>12 monthly installments</strong>.</p>
+          <ul class="checks" style="margin-top:18px;">
+            <li>Done-for-you AI setup and digital marketing build support</li>
+            <li>Offer positioning and creation guidance</li>
+            <li>Digital asset and launch system support</li>
+            <li>Creation DFY delivery model shaped for warm, practical execution</li>
+            <li>Warm, plain-English support for non-technical founders and creators</li>
+          </ul>
+          <div class="guarantee">
+            <strong>30-day money-back guarantee</strong>
+            <p class="small" style="margin:8px 0 0;">No questions asked. If it does not feel like the right fit in the first 30 days, we refund you.</p>
+          </div>
+          <div class="hero-actions" style="margin-top:22px;">
+            <a class="btn" href="mailto:hello@creationdfy.com?subject=Creation%20DFY%20Inquiry">Start with Creation DFY</a>
+            <a class="btn-secondary" href="#faq">Read the FAQ</a>
+          </div>
+        </div>
+
+        <div class="promise-grid">
+          <div class="promise">
+            <h3>Best for</h3>
+            <p>People with ideas worth building who want capable support instead of another pile of theory.</p>
+          </div>
+          <div class="promise">
+            <h3>Payment flexibility</h3>
+            <p>Annual commitment, payable upfront or split into 12 monthly payments to keep entry lighter.</p>
+          </div>
+          <div class="promise">
+            <h3>Emotional tone</h3>
+            <p>Warm, caring, capable, and hopeful — not cold agency language and not internet-marketer hype.</p>
+          </div>
+          <div class="promise">
+            <h3>Delivery model</h3>
+            <p>Done for you where it matters, AI-assisted where it helps, and grounded in turning dreams into something usable.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">FAQ</span>
+          <h2>The practical questions people usually have before saying yes.</h2>
+        </div>
+        <div class="faq-grid">
+          <div class="faq"><h3>What exactly do you mean by done for you?</h3><p>We mean we help build the strategy, structure, assets, and AI-supported operating pieces with you instead of leaving you alone with prompts and theory.</p></div>
+          <div class="faq"><h3>What if my idea is still rough?</h3><p>That is normal. You do not need a finished concept to begin. A strong idea and willingness to move is enough.</p></div>
+          <div class="faq"><h3>Is this for agencies only?</h3><p>No. It is also for solo founders, creators, coaches, experts, consultants, side-hustlers, and people trying to finally turn insight into income.</p></div>
+          <div class="faq"><h3>Can I pay monthly?</h3><p>Yes. The engagement is annual, but it can be split into 12 monthly payments.</p></div>
+          <div class="faq"><h3>Do you offer a guarantee?</h3><p>Yes. There is a 30-day money-back guarantee with no questions asked.</p></div>
+          <div class="faq"><h3>What kind of system are you building for me?</h3><p>We build the offer, messaging, AI-supported workflow, and digital marketing foundation around your idea so you have something real to grow from.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="sticky-cta">
+    <div class="bar">
+      <div class="copy">
+        <strong>Creation DFY — $1,750 annual</strong>
+        <span>Also available in 12 monthly payments • 30-day no-questions-asked guarantee</span>
+      </div>
+      <a href="mailto:hello@creationdfy.com?subject=Creation%20DFY%20Inquiry">Bring my idea to life</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container small">Creation DFY • creationdfy.com • Done-for-you AI setup & digital marketing agency built to help good ideas grow.</div>
+  </footer>
+</body>
+</html>
