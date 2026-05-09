@@ -240,23 +240,142 @@
       overflow: hidden;
       position: relative;
       min-height: 100%;
+      padding: 26px;
+      background:
+        radial-gradient(circle at top left, rgba(122, 172, 113, 0.18), transparent 26%),
+        radial-gradient(circle at top right, rgba(213, 161, 76, 0.16), transparent 24%),
+        linear-gradient(180deg, rgba(255,255,255,0.98), rgba(246,239,227,0.92));
     }
 
-    .visual img {
-      width: 100%;
-      aspect-ratio: 4 / 4.2;
-      object-fit: cover;
+    .visual-growth {
+      position: relative;
+      min-height: 520px;
+      border-radius: 28px;
+      border: 1px solid rgba(114, 92, 61, 0.1);
+      background:
+        radial-gradient(circle at 20% 18%, rgba(213,161,76,0.14), transparent 20%),
+        radial-gradient(circle at 78% 20%, rgba(79,138,91,0.12), transparent 24%),
+        linear-gradient(180deg, #fffdf8 0%, #edf4e8 54%, #e0eed9 100%);
+      overflow: hidden;
     }
 
-    .visual-overlay {
+    .growth-sun {
       position: absolute;
-      inset: auto 20px 20px 20px;
-      background: rgba(255, 253, 248, 0.88);
-      border: 1px solid rgba(114, 92, 61, 0.12);
-      border-radius: 22px;
-      padding: 18px;
-      backdrop-filter: blur(10px);
+      top: 40px;
+      right: 54px;
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,239,196,0.95) 0%, rgba(255,230,164,0.72) 55%, rgba(255,230,164,0) 75%);
     }
+
+    .growth-ground {
+      position: absolute;
+      left: 24px;
+      right: 24px;
+      bottom: 18px;
+      height: 120px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 50% 0%, rgba(130,173,115,0.24), rgba(130,173,115,0.04) 55%, rgba(130,173,115,0) 72%);
+    }
+
+    .growth-seed,
+    .growth-sprout,
+    .growth-tree-trunk,
+    .growth-tree-crown,
+    .growth-copy {
+      position: absolute;
+    }
+
+    .growth-seed {
+      left: 92px;
+      bottom: 96px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #7c5528;
+      box-shadow: 0 0 0 14px rgba(124, 85, 40, 0.07);
+    }
+
+    .growth-sprout {
+      left: 198px;
+      bottom: 100px;
+      width: 10px;
+      height: 92px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, #7fbe77, #4f8a5b);
+    }
+
+    .growth-sprout::before,
+    .growth-sprout::after {
+      content: "";
+      position: absolute;
+      top: 12px;
+      width: 42px;
+      height: 24px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #8fd084, #66a668);
+    }
+
+    .growth-sprout::before { right: 5px; transform: rotate(-24deg); }
+    .growth-sprout::after { left: 5px; transform: rotate(24deg); }
+
+    .growth-path {
+      position: absolute;
+      left: 114px;
+      bottom: 160px;
+      width: 180px;
+      height: 120px;
+      border-bottom: 3px dashed rgba(213,161,76,0.72);
+      border-radius: 0 0 140px 140px;
+      transform: rotate(-10deg);
+    }
+
+    .growth-tree-trunk {
+      right: 120px;
+      bottom: 102px;
+      width: 18px;
+      height: 150px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, #875b2d, #5c3e20);
+    }
+
+    .growth-tree-trunk::before,
+    .growth-tree-trunk::after {
+      content: "";
+      position: absolute;
+      width: 72px;
+      height: 10px;
+      border-radius: 999px;
+      background: #6f4b25;
+      top: 36px;
+    }
+
+    .growth-tree-trunk::before { left: -56px; transform: rotate(-38deg); }
+    .growth-tree-trunk::after { right: -56px; transform: rotate(38deg); }
+
+    .growth-tree-crown {
+      right: 50px;
+      bottom: 196px;
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 50% 42%, #9ad08d 0%, #76b36e 52%, #4f8a5b 100%);
+      box-shadow: -58px 18px 0 -18px rgba(111,170,98,0.9), 58px 22px 0 -18px rgba(98,158,90,0.88), 0 -54px 0 -14px rgba(135,202,123,0.9);
+    }
+
+    .growth-copy {
+      left: 34px;
+      right: 34px;
+      top: 28px;
+      padding: 20px;
+      border-radius: 24px;
+      background: rgba(255,253,248,0.78);
+      border: 1px solid rgba(114, 92, 61, 0.1);
+      backdrop-filter: blur(8px);
+    }
+
+    .growth-copy p { margin: 8px 0 0; }
 
     .tree-reel {
       margin-top: 18px;
@@ -413,13 +532,16 @@
     }
 
     .sticky-cta {
-      position: sticky;
+      position: fixed;
+      left: 0;
+      right: 0;
       bottom: 18px;
-      z-index: 20;
-      padding: 0 16px 18px;
+      z-index: 40;
+      padding: 0 16px;
       display: flex;
       justify-content: center;
       pointer-events: none;
+      transition: opacity .25s ease, transform .25s ease;
     }
 
     .sticky-cta .bar {
@@ -428,7 +550,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 12px;
-      padding: 14px;
+      padding: 14px 14px 14px 18px;
       border-radius: 999px;
       background: rgba(255, 253, 248, 0.94);
       border: 1px solid rgba(114, 92, 61, 0.12);
@@ -438,6 +560,42 @@
 
     .sticky-cta .copy strong { display: block; }
     .sticky-cta .copy span { color: var(--muted); font-size: 0.92rem; }
+
+    .sticky-cta .controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .sticky-close {
+      width: 42px;
+      height: 42px;
+      border: 1px solid rgba(114, 92, 61, 0.12);
+      background: rgba(255,255,255,0.86);
+      color: var(--muted);
+      border-radius: 999px;
+      font: inherit;
+      font-size: 1.1rem;
+      cursor: pointer;
+    }
+
+    .sticky-cta.is-docked {
+      position: relative;
+      bottom: auto;
+      padding: 0;
+      margin-top: 24px;
+      transform: none;
+    }
+
+    .sticky-cta.is-docked .bar {
+      width: 100%;
+    }
+
+    .sticky-cta.is-hidden {
+      opacity: 0;
+      transform: translateY(24px);
+      pointer-events: none;
+    }
 
     footer {
       padding: 10px 0 48px;
@@ -507,10 +665,18 @@
         </div>
 
         <div class="visual">
-          <img src="assets/hero-banner.jpg" alt="Creation DFY warm growth-oriented agency visual" />
-          <div class="visual-overlay">
-            <strong>What we do for you</strong>
-            <p class="small">We turn scattered ideas into a polished offer, clear messaging, AI-supported workflows, digital assets, and a marketing-ready launch path — without making you become a tech expert first.</p>
+          <div class="visual-growth" aria-label="Creation DFY growth visual">
+            <div class="growth-sun"></div>
+            <div class="growth-copy">
+              <strong>What we do for you</strong>
+              <p class="small">We turn scattered ideas into a polished offer, clear messaging, AI-supported workflows, digital assets, and a marketing-ready launch path — without making you become the tech department.</p>
+            </div>
+            <div class="growth-seed"></div>
+            <div class="growth-path"></div>
+            <div class="growth-sprout"></div>
+            <div class="growth-tree-trunk"></div>
+            <div class="growth-tree-crown"></div>
+            <div class="growth-ground"></div>
           </div>
         </div>
       </div>
@@ -699,13 +865,18 @@
     </section>
   </main>
 
-  <div class="sticky-cta">
-    <div class="bar">
-      <div class="copy">
-        <strong>Creation DFY — $1,750 annual</strong>
-        <span>Also available in 12 monthly payments • 30-day no-questions-asked guarantee</span>
+  <div class="container">
+    <div class="sticky-cta" data-sticky-cta>
+      <div class="bar">
+        <div class="copy">
+          <strong>Creation DFY — $1,750 annual</strong>
+          <span>Also available in 12 monthly payments • 30-day no-questions-asked guarantee</span>
+        </div>
+        <div class="controls">
+          <a href="apply.html" data-ref-link="true">Bring my idea to life</a>
+          <button type="button" class="sticky-close" data-sticky-close aria-label="Dock call to action">×</button>
+        </div>
       </div>
-      <a href="apply.html" data-ref-link="true">Bring my idea to life</a>
     </div>
   </div>
 
@@ -713,5 +884,49 @@
     <div class="container small">Creation DFY • creationdfy.com • Done-for-you AI setup & digital marketing agency built to help good ideas grow.</div>
   </footer>
   <script src="referral.js"></script>
+  <script>
+    (function () {
+      const sticky = document.querySelector('[data-sticky-cta]');
+      const closeBtn = document.querySelector('[data-sticky-close]');
+      const footer = document.querySelector('footer');
+      if (!sticky || !closeBtn || !footer) return;
+
+      let docked = false;
+      const placeholder = document.createElement('div');
+      placeholder.style.height = '0px';
+      sticky.parentNode.insertBefore(placeholder, sticky.nextSibling);
+
+      function undock() {
+        if (!docked) return;
+        document.body.appendChild(sticky);
+        sticky.classList.remove('is-docked');
+        placeholder.style.height = '0px';
+        docked = false;
+      }
+
+      function dock() {
+        if (docked) return;
+        footer.parentNode.insertBefore(sticky, footer);
+        sticky.classList.add('is-docked');
+        placeholder.style.height = '0px';
+        docked = true;
+      }
+
+      function onScroll() {
+        if (docked) return;
+        const footerTop = footer.getBoundingClientRect().top;
+        const threshold = window.innerHeight - 120;
+        if (footerTop < threshold) {
+          dock();
+        }
+      }
+
+      closeBtn.addEventListener('click', dock);
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll);
+      document.body.appendChild(sticky);
+      onScroll();
+    })();
+  </script>
 </body>
 </html>
