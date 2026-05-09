@@ -295,8 +295,8 @@
       background: #e9e1d4;
     }
 
-    .video-shell iframe,
-    .video-shell img {
+    .video-shell img,
+    .video-shell a.video-link {
       position: absolute;
       inset: 0;
       width: 100%;
@@ -308,13 +308,19 @@
       object-fit: cover;
     }
 
+    .video-shell a.video-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(0,0,0,0.18));
+    }
+
     .video-placeholder {
       position: absolute;
       inset: 0;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(0,0,0,0.14));
       pointer-events: none;
     }
 
@@ -688,11 +694,12 @@
               <p>When you're ready, replace the placeholder video ID in the page code and this section becomes your embedded walkthrough, pitch, or explainer.</p>
             </div>
             <div class="video-shell">
-              <img src="assets/creationdfy-main-visual.jpg" alt="Creation DFY video placeholder image" />
-              <iframe id="creationdfy-video" src="about:blank" title="Creation DFY video placeholder" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-              <div class="video-placeholder" data-video-placeholder>
-                <div class="play-badge"><span class="play-icon"></span>Video slot ready for your YouTube link</div>
-              </div>
+              <img id="creationdfy-video-thumb" src="assets/creationdfy-main-visual.jpg" alt="Creation DFY video thumbnail" />
+              <a id="creationdfy-video-link" class="video-link" href="https://youtu.be/glQwCjUO3RQ?si=Ns6SOdsCHOdWHLXu" target="_blank" rel="noopener noreferrer" aria-label="Watch Creation DFY video on YouTube">
+                <div class="video-placeholder" data-video-placeholder>
+                  <div class="play-badge"><span class="play-icon"></span>Watch the video on YouTube</div>
+                </div>
+              </a>
             </div>
           </div>
         </div>
@@ -914,13 +921,16 @@
   <script>
     (function () {
       const VIDEO_ID = 'glQwCjUO3RQ';
-      const iframe = document.getElementById('creationdfy-video');
-      const placeholder = document.querySelector('[data-video-placeholder]');
-      if (iframe && VIDEO_ID && VIDEO_ID !== 'YOUR_YOUTUBE_VIDEO_ID') {
-        iframe.src = 'https://www.youtube.com/embed/' + VIDEO_ID + '?rel=0&modestbranding=1';
-        if (placeholder) placeholder.style.display = 'none';
-      } else if (iframe) {
-        iframe.style.display = 'none';
+      const VIDEO_URL = 'https://youtu.be/glQwCjUO3RQ?si=Ns6SOdsCHOdWHLXu';
+      const thumb = document.getElementById('creationdfy-video-thumb');
+      const videoLink = document.getElementById('creationdfy-video-link');
+      if (videoLink) videoLink.href = VIDEO_URL;
+      if (thumb && VIDEO_ID) {
+        thumb.src = 'https://img.youtube.com/vi/' + VIDEO_ID + '/maxresdefault.jpg';
+        thumb.onerror = function () {
+          this.onerror = null;
+          this.src = 'https://img.youtube.com/vi/' + VIDEO_ID + '/hqdefault.jpg';
+        };
       }
 
       const sticky = document.querySelector('[data-sticky-cta]');
