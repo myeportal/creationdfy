@@ -272,6 +272,19 @@
       padding: 24px;
     }
 
+    .hero-media {
+      display: grid;
+      gap: 18px;
+    }
+
+    .section-image {
+      width: 100%;
+      border-radius: 24px;
+      border: 1px solid rgba(114, 92, 61, 0.12);
+      object-fit: cover;
+      box-shadow: var(--shadow);
+    }
+
     .video-shell {
       position: relative;
       width: 100%;
@@ -570,7 +583,8 @@
       .service-grid,
       .proof-grid,
       .results-grid,
-      .stats-grid {
+      .stats-grid,
+      .hero-media {
         grid-template-columns: 1fr;
       }
     }
@@ -623,11 +637,28 @@
           </div>
         </div>
 
-        <div class="visual">
-          <img src="assets/creationdfy-main-visual.jpg" alt="Creation DFY strategy and consulting visual" />
-          <div class="visual-overlay">
-            <strong>What we do for you</strong>
-            <p class="small">We turn scattered ideas into a polished offer, clear messaging, AI-supported workflows, digital assets, and a marketing-ready launch path — without making you become the tech department.</p>
+        <div class="hero-media">
+          <div class="video-block">
+            <div class="section-head" style="margin-bottom:18px; max-width:900px;">
+              <span class="eyebrow">Video walkthrough</span>
+              <h2>Drop your YouTube video here later — for now the branded visual holds the spot.</h2>
+              <p>When you're ready, replace the placeholder video ID in the page code and this section becomes your embedded walkthrough, pitch, or explainer.</p>
+            </div>
+            <div class="video-shell">
+              <img src="assets/creationdfy-main-visual.jpg" alt="Creation DFY video placeholder image" />
+              <iframe id="creationdfy-video" src="about:blank" title="Creation DFY video placeholder" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              <div class="video-placeholder" data-video-placeholder>
+                <div class="play-badge"><span class="play-icon"></span>Video slot ready for your YouTube link</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="visual">
+            <img src="assets/creationdfy-main-visual.jpg" alt="Creation DFY strategy and consulting visual" />
+            <div class="visual-overlay">
+              <strong>What we do for you</strong>
+              <p class="small">We turn scattered ideas into a polished offer, clear messaging, AI-supported workflows, digital assets, and a marketing-ready launch path — without making you become the tech department.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -638,25 +669,6 @@
         <div class="stat card"><strong>1 offer</strong><span>Simple pricing with one clear decision instead of a ladder of upsells.</span></div>
         <div class="stat card"><strong>12 months</strong><span>Annual engagement with the option to split it into 12 monthly payments.</span></div>
         <div class="stat card"><strong>30 days</strong><span>No-questions-asked money-back guarantee if it does not feel right.</span></div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="video-block">
-          <div class="section-head" style="margin-bottom:18px; max-width:900px;">
-            <span class="eyebrow">Video walkthrough</span>
-            <h2>Drop your YouTube video here later — for now the branded visual holds the spot.</h2>
-            <p>When you're ready, replace the placeholder video ID in the page code and this section becomes your embedded walkthrough, pitch, or explainer.</p>
-          </div>
-          <div class="video-shell">
-            <img src="assets/creationdfy-main-visual.jpg" alt="Creation DFY video placeholder image" />
-            <iframe id="creationdfy-video" src="about:blank" title="Creation DFY video placeholder" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <div class="video-placeholder" data-video-placeholder>
-              <div class="play-badge"><span class="play-icon"></span>Video slot ready for your YouTube link</div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -732,6 +744,7 @@
         <div class="story-card">
           <span class="eyebrow">Who this is for</span>
           <h2>Built for people with vision, not just people with teams.</h2>
+          <img class="section-image" src="assets/mid-img1.jpg" alt="Creation DFY support illustration" style="margin: 0 0 18px; aspect-ratio: 16 / 10;" />
           <ul class="checks">
             <li>You have a strong idea but no clear execution system.</li>
             <li>You know your idea could help people, but you do not know how to package or launch it.</li>
@@ -763,6 +776,7 @@
           <div class="result"><h3>Offer refinement</h3><p>Sharper service packaging, clearer outcomes, and a more compelling path to yes.</p></div>
           <div class="result"><h3>Launch readiness</h3><p>The pieces assembled so your project can actually move instead of staying theoretical.</p></div>
         </div>
+        <img class="section-image" src="assets/mid-img2.jpg" alt="Creation DFY workflow support visual" style="margin-top: 22px; aspect-ratio: 16 / 8;" />
       </div>
     </section>
 
