@@ -1,0 +1,40 @@
+{
+  "repo": "creationdfy",
+  "title": "Creation DFY",
+  "tag": "Done-For-You Creation Service",
+  "accent": "#06b6d4",
+  "accent2": "#f43f5e",
+  "hook": "A premium DFY service funnel built to convert leads who want hands-on creation, setup, and business-building help without doing everything themselves.",
+  "sections": [
+    [
+      "01",
+      "Core Offer",
+      "Main sales page, application path, affiliate page, thank-you flow, and referral-aware logic."
+    ],
+    [
+      "02",
+      "Problem Solved",
+      "Sells the outcome of getting digital creation and implementation done for the buyer, not just advice."
+    ],
+    [
+      "03",
+      "Key Assets",
+      "Service positioning, apply flow, affiliate/referral support, polished copy, and site closer integration."
+    ],
+    [
+      "04",
+      "Ideal Buyer",
+      "Founders, entrepreneurs, and creators who want execution help and faster progress without a full in-house team."
+    ],
+    [
+      "05",
+      "Growth Path",
+      "Traffic -> authority page -> apply / affiliate path -> consultative sale -> onboarding and delivery."
+    ],
+    [
+      "06",
+      "Next Expansion",
+      "Tighten domain setup, add richer proof, and deepen referral attribution and backend CRM logic."
+    ]
+  ]
+}
