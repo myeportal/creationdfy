@@ -527,6 +527,13 @@
       padding: 10px 0 48px;
     }
 
+    .site-closer-toggle,.site-closer-send{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:999px;padding:14px 18px;font-weight:800;cursor:pointer;background:linear-gradient(135deg,var(--green),var(--gold));color:#fff;box-shadow:0 16px 38px rgba(79,138,91,.22)}
+    .site-closer-toggle{position:fixed;right:18px;bottom:18px;z-index:80}
+    .site-closer{position:fixed;right:18px;bottom:84px;z-index:79;width:min(390px,calc(100vw - 24px));display:none;border:1px solid var(--line);border-radius:24px;background:rgba(255,250,244,.98);box-shadow:var(--shadow);overflow:hidden}
+    .site-closer.open{display:block}.site-closer-header{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;padding:16px 18px;border-bottom:1px solid var(--line)}.site-closer-header p,.site-closer-note{color:var(--muted);font-size:.9rem}.site-closer-close{border:0;background:transparent;color:var(--muted);font-size:1.2rem;cursor:pointer}
+    .site-closer-body{padding:16px 18px;display:grid;gap:12px;max-height:min(72vh,620px);overflow:auto}.site-closer-messages{display:grid;gap:10px}.site-closer-msg{padding:12px 14px;border-radius:16px;font-size:.95rem;line-height:1.5}.site-closer-msg.bot{background:rgba(213,161,76,.12);border:1px solid rgba(213,161,76,.18)}.site-closer-msg.user{background:rgba(255,255,255,.8);border:1px solid var(--line)}
+    .site-closer-input-wrap{display:grid;grid-template-columns:1fr auto;gap:10px}.site-closer-input{width:100%;padding:12px 14px;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.82);color:var(--text);font:inherit}.site-closer-options,.site-closer-actions{display:flex;flex-wrap:wrap;gap:10px}.site-closer-option,.site-closer-primary,.site-closer-secondary{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:10px 14px;font-weight:800;border:1px solid var(--line);background:rgba(255,255,255,.82);color:var(--text);cursor:pointer}.site-closer-primary{background:linear-gradient(135deg,var(--green),var(--gold));color:#fff;border:0}
+
     @media (max-width: 1024px) {
       .hero-grid,
       .pricing-grid,
@@ -829,10 +836,32 @@
     </div>
   </div>
 
+  <button class="site-closer-toggle" id="site-closer-toggle" type="button">Need help choosing?</button>
+  <aside class="site-closer" id="site-closer" aria-label="Creation DFY fit helper">
+    <div class="site-closer-header">
+      <div>
+        <strong>Creation DFY Fit Helper</strong>
+        <p>Tell me what kind of client-closing help you want and I’ll point you to the right next step.</p>
+      </div>
+      <button class="site-closer-close" id="site-closer-close" type="button" aria-label="Close">×</button>
+    </div>
+    <div class="site-closer-body">
+      <div class="site-closer-messages" id="site-closer-messages"></div>
+      <div class="site-closer-input-wrap">
+        <input class="site-closer-input" id="site-closer-input" type="text" placeholder="What do you need built or fixed?" />
+        <button class="site-closer-send" id="site-closer-send" type="button">Send</button>
+      </div>
+      <div class="site-closer-options" id="site-closer-options"></div>
+      <div class="site-closer-actions" id="site-closer-actions"></div>
+      <div class="site-closer-note">Creation DFY is a done-for-you annual build for stronger offers, positioning, and client-closing assets.</div>
+    </div>
+  </aside>
+
   <footer>
     <div class="container small">Creation DFY • creationdfy.com • Professional done-for-you AI setup & digital marketing agency for stronger offers, sharper positioning, and better client conversion.</div>
   </footer>
   <script src="referral.js"></script>
+  <script src="site-closer.js"></script>
   <script>
     (function () {
       const VIDEO_ID = 'glQwCjUO3RQ';
